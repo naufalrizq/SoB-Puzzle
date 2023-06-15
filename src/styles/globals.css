@@ -1,0 +1,100 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+	transition: 1s;
+}
+html,
+body {
+	height: 100%;
+	background: black;
+	color: white;
+}
+
+/* .AR {
+  min-height: 100%;
+  background: red;
+} */
+
+.frame {
+	height: 100%;
+	width: 70%;
+}
+
+.frame,
+.frame-end {
+	position: absolute;
+	border: 0;
+	overflow: hidden;
+	left: 0;
+}
+
+.frame-end {
+	width: 0;
+}
+
+.game {
+	width: 30%;
+	height: 100%;
+}
+
+.game,
+.game-end {
+	position: absolute;
+	overflow: auto;
+	top: 0;
+	right: 0;
+	text-align: center;
+	padding: 2rem;
+}
+
+.game-end {
+	width: 100%;
+}
+
+.title {
+	font-size: 3rem;
+	padding: 1rem;
+}
+
+.content {
+	font-size: 5rem;
+}
+
+button {
+	padding: 0.5rem 3rem;
+	border-radius: 25px;
+	/* background: rgb(45, 75, 207); */
+	font-size: 1rem;
+	color: white;
+	margin: 1rem;
+}
+
+/* button:hover {
+	background: rgb(93, 119, 233);
+} */
+
+textarea {
+	width: 100%;
+	font-size: 1.5rem;
+	border-radius: 20px;
+	padding: 1.4rem 1rem 0rem 1rem;
+	text-align: center;
+}
+
+#leaderboard {
+	/* position: absolute;
+	overflow: auto;
+	top: 0;
+	right: 0;
+	text-align: center; */
+	margin: 2rem auto;
+	font-size: 2rem;
+}
+
+#leaderboard td {
+	/* border-bottom: 2px solid white; */
+	text-align: center;
+	padding: 2rem;
+}

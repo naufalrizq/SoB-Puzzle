@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!-- For inserting your own marker. Make your own marker and then in the code add
+for marker-camera
+<a-marker-camera type='pattern' *according to comments it should just be url and you should have 
+a preset="custom"* 
+patternUrl='path to the marker'></a-marker-camera>
+for plain marker
+<a-marker type='pattern' patternUrl='path to marker'></a-marker> -->
+<html>
+	<head>
+		<!-- a frame library -->
+		<script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+		<!-- ar.js library -->
+		<script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.4/aframe/build/aframe-ar.js"></script>
+	</head>
+	<!-- defining the body  -->
+	<body>
+		<!-- creating a scene. this will switch on the camera and start recording the 
+    location in space-->
+		<a-scene
+			embedded
+			arjs="detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;"
+		>
+			<!-- these marker presets can be changed. example if you have kanji
+        you can say <a-marker-camera preset="kanji"> -->
+
+			<!-- type="hiro" -->
+
+			<!-- set attribute position and get attribute after giving it an id. ex. if id
+        is mysphere. do mysphere.getattribute('position','0 0 0'); -->
+
+			<!-- Barcode number 1 with value 0 -->
+			<a-marker id="marker1" type="barcode" value="0">
+				<a-plane
+					id="logo"
+					src="/public/puzzlePiece/row-1-1.png"
+					position="0 0.5 0"
+					rotation="-90 0 0"
+					width="2.0"
+					height="2.2"
+				>
+				</a-plane>
+
+				<!-- you can make a sphere with <a-sphere></a-sphere> -->
+				<!-- instead of material you can say color="blue" -->
+				<!-- <a-entity
+          geometry="primitive: plane; width:1; height:1"
+          position="0 0.5 0"
+          rotation="45 0 0"
+        ></a-entity> -->
+			</a-marker>
+
+			<!-- Marker number 2 with value 1-->
+			<a-marker
+				id="marker2"
+				type="barcode"
+				value="1"
+				class="marker"
+				class="marker"
+			>
+				<a-plane
+					id="logo"
+					src="/public/puzzlePiece/row-1-2.png"
+					position="0 0.5 0"
+					rotation="-90 0 0"
+					width="2"
+					height="2.2"
+				>
+				</a-plane>
+			</a-marker>
+
+			<!-- marker number 3 with value 10-->
+			<a-marker id="marker3" type="barcode" value="10">
+				<a-plane
+					id="logo"
+					src="/public/puzzlePiece/row-1-3.png"
+					position="0 0.5 0"
+					rotation="-90 0 0"
+					width="2"
+					height="2.2"
+				>
+				</a-plane>
+			</a-marker>
+
+			<!-- marker number 4 with value 11-->
+			<a-marker id="marker4" type="barcode" value="11">
+				<a-plane
+					id="logo"
+					src="/public/puzzlePiece/row-1-4.png"
+					position="0 0.5 0"
+					rotation="-90 0 0"
+					width="2"
+					height="2"
+				>
+				</a-plane>
+			</a-marker>
+
+			<!-- marker number 5 with value 12 -->
+			<a-marker id="marker5" type="barcode" value="12">
+				<a-plane
+					id="logo"
+					src="/public/puzzlePiece/row-2-1.png"
+					position="0 0.5 0"
+					rotation="-90 0 0"
+					width="2"
+					height="2"
+				>
+				</a-plane>
+			</a-marker>
+
+			<!-- marker number 6 with value 13-->
+			<a-marker id="marker6" type="barcode" value="13">
+				<a-plane
+					id="logo"
+					src="/public/puzzlePiece/row-2-2.png"
+					position="0 0.5 0"
+					rotation="-90 0 0"
+					width="2"
+					height="2"
+				>
+				</a-plane>
+			</a-marker>
+
+			<!-- marker number 7 with value 14-->
+			<a-marker id="marker7" type="barcode" value="14">
+				<a-plane
+					id="logo"
+					src="/public/puzzlePiece/row-2-3.png"
+					position="0 0.5 0"
+					rotation="-90 0 0"
+					width="2"
+					height="2"
+				>
+				</a-plane>
+			</a-marker>
+
+			<!-- marker number 8 with value 15-->
+			<a-marker id="marker8" type="barcode" value="15">
+				<a-plane
+					id="logo"
+					src="/public/puzzlePiece/row-2-4.png"
+					position="0 0.5 0"
+					rotation="-90 0 0"
+					width="2"
+					height="2"
+				>
+				</a-plane>
+			</a-marker>
+
+			<a-entity camera></a-entity>
+		</a-scene>
+		<!-- if you want to add a github project it has to be type jpg. just put <a-sphere>
+    and then the asset. then the radius and the segments-height -->
+		<!-- you can add animations with a-animation attribute="scale" dur="1000" from="1 1 1"
+    to="2 2 2"
+direction='alternate-reverse'
+easing="ease-in-out-circ" 
+repeat="indefinite a-animation-->
+
+		<!-- <script src="./scripts/arPuzzle.js"></script> -->
+	</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="/src/styles/globals.css" />
+		<title>Puzzle SoB</title>
+	</head>
+	<body>
+		<iframe src="./AR.html" scrolling="no" class="frame" id="ARframe"></iframe>
+		<div 
+		class="game border-4 border-sky-500 bg-gray-800" 
+		id="game">
+			<div 
+			class="bg-white shadow-md rounded-md p-4 mb-2"
+			id="timer">
+				<h1 
+				class="title font-bold text-black">
+				Timer
+			</h1>
+				<div 
+				class="content text-black rounded-md bg-gray-400 mt-2" id="timerDisplay">
+				00:00.00
+			</div>
+				
+				<button 
+				id="start"
+				class="rounded-full bg-green-500 outline hover:bg-green-700 ">
+				Start
+			</button>
+				<button 
+				id="pauseReset"
+				class="rounded-full bg-red-500 outline hover:bg-red-700">
+				Reset
+			</button>
+
+				<!--need to add function to do something on submit-->
+			</div>
+			<div id="input"
+		>
+				<h1 
+				class="title">
+				Masukkan Nama Kamu
+			</h1>
+				<textarea
+					class="text-black"
+					maxlength="10"
+					id="textarea"
+					placeholder="..."
+				></textarea>
+				<button 
+				id="submitBtn"
+				class="rounded-full bg-green-500 outline hover:bg-green-700">
+					Submit
+				</button>
+				<!--need to add function to do something on submit-->
+			</div>
+			<h1 id="message"></h1>
+			<div 
+			id="scoreboard"
+			>
+				<h1 
+				class="title" 
+				style="border-bottom: 2px solid white;">
+					Scoreboard
+				</h1>
+				<table 
+				id="leaderboard"
+				class="">
+			</table>
+			</div>
+		</div>
+		<script src="/src/utils/leaderboard.js"></script>
+		<script src="/src/utils/arPuzzle.js"></script>
+	</body>
+</html>
